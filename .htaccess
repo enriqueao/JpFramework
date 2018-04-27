@@ -1,0 +1,46 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+#modifica el tamaño de subida permitido
+#php_value upload_max_filesize 10M
+#php_value post_max_size 15M
+#php_value max_execution_time 120
+
+#Evita el acceso a los index del proyecto
+Options -Indexes
+Options All -Indexes
+# evitar el listado de carpetas
+IndexIgnore *
+
+# disfraza todas las extensiones de archivo como si fuesen php
+#ForceType application/x-httpd-php
+
+# evitar la visualizlación de un archivo concreto
+<files robots.txt>
+order allow,deny
+deny from all
+</files>
+
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# corregir automaticamente errores de ortografia basicos en URL
+<IfModule mod_speling.c>
+CheckSpelling On
+</IfModule>
+
+ServerSignature Off
+
+# servir paginas de error personalizadas
+#ErrorDocument 400 /errores/400.html
+#ErrorDocument 401 /errores/401.html
+#ErrorDocument 403 /errores/403.html
+#ErrorDocument 404 /errores/404.html
+#ErrorDocument 500 /errores/500.html

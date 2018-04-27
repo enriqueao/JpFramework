@@ -1,0 +1,225 @@
+#categorias{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    left: 2.5%;
+    margin-top: 30px;
+    justify-content: space-between ;
+}
+
+.categoriaColor{
+    display: flex;
+    flex-basis: auto; 
+    height: 20px;
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.batchArticulos{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+}
+
+.articuloRow:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+.articuloRow{
+    position: relative;
+    width: 100%;
+    height: 35px;
+}
+
+.tituloRow{
+    position: relative;
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: calc(85% - 25px);
+}
+
+.verMasRow{
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.articulo{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    top: 20px;
+    height: 130px;
+    border: 1px solid rgba(96, 125, 139, .1);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 1px 9px 31px -16px rgba(0,0,0,0.40);
+    -moz-box-shadow: 1px 9px 31px -16px rgba(0,0,0,0.40);
+    box-shadow: 1px 9px 31px -16px rgba(0,0,0,0.40);
+}
+
+.informacion{
+    position: relative;
+    float: left;
+    width: 87%;
+    height: 100%;
+    border-right: 1px solid rgba(96, 125, 139, .2);
+}
+
+.informacion>p{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin: 10px;
+    max-height: 2.8rem;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.informacion>div>label, .informacion>label{
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.informacion>p>b, .informacion>div>label>b, .informacion>label>b{
+    color: rgb(0, 117, 219);
+    font-weight: normal;
+}
+
+.informacion>div>select{
+    width: 30%;
+    padding-left: 10px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    height: 25px;
+}
+
+.informacion>div{
+    position: relative;
+    top: -4px;
+    float: left;
+    width: 100%;
+}
+
+.fecha{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    height: 30px;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.informacion>div>button{
+    height: 25px;
+    width: 70px;
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(0, 117, 219, 1);
+    cursor: pointer;
+    font-size: .9rem;
+    color: white;
+    border-radius: 3px;
+    margin-top: -2px;
+    margin-right: 10px;
+}
+
+.informacion>div>button:hover{
+    opacity: 0.8;
+}
+
+.vermas{
+    display: flex;
+    position: relative;
+    width: 12%;
+    left: 1%;
+    height: 100%;
+    float: left;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: rgb(0, 119, 217);
+}
+
+.cate{
+    width: 35%;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.vermas>p{
+    cursor: pointer;
+}
+
+.avisoSinRegistros{
+/*  text-align: center;
+    font-size: 1.2em;
+    height: 30px;
+    color: rgba(0, 0, 0, 0.4);
+    margin: auto;
+    top: calc(50% - 30px);
+    position: relative;
+    width: 100%;
+*/
+    text-align: center;
+    height: 30px;
+    color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    top: calc(50% - 34px);
+    position: relative;
+    width: 100%;
+}
+
+#asignacion{
+    position: relative;
+    left: 5%;
+    width: 90%;
+}
+
+#asignacion>h3{
+    font-weight: normal;
+    font-size: 1.1em;
+    color: rgb(0, 117, 219);
+    margin-bottom: 10px;
+}
+
+#asignacion>select{
+    top: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: .9em;
+    box-sizing: border-box;
+    padding-left: 10px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .07);
+}
+
+#asignacion>label{
+    margin-bottom: 10px !important;
+    font-size: .9em;
+}
+
+#asignacion>div{
+    margin-top: 20px;
+    font-size: .95em;
+}

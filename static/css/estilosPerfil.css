@@ -1,0 +1,284 @@
+.dataRow{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.lmb{
+    margin-bottom: 0px !important;
+}
+
+.inputT, .inputT2{
+    display: flex;
+    flex-grow: 1;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .07);
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align-last: center;
+}
+
+.inputT2{
+    background-color: white !important;
+    pointer-events: none !important;
+    color: black !important;
+    text-align-last: left;
+}
+
+.buttonT{
+    position: relative;
+    font-size: .9em;
+    background-color: rgba(0, 119, 217, 1);
+    height: 35px;
+    width: 25%;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    left: 75%;
+}
+
+.buttonT:hover{
+    opacity: .8;
+}
+
+.disabled{
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+.inputT:focus{
+    display: flex;
+    flex-grow: 1;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .07);
+    border: none;
+    font-size: 1.05em;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+}
+
+.labelT, .labelT2{
+    display: flex;
+    flex-basis: 20%;
+    align-content: center;
+    align-items: center;
+    color: rgba(0, 119, 217, 1);
+    font-size: 1.1em;
+}
+
+.labelT2{
+    flex-basis: 35% !important;
+    padding-left: 20px;
+}
+
+#perfil{
+    position: absolute;
+    background-color: white;
+    z-index: 9999;
+    width: 65%;
+    height: 600px;
+    left: 17.5%;
+    top: calc(50% - 300px);
+    -webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 119, 217, 0.4);
+    box-sizing: border-box;
+}
+
+#foto{
+    position: relative;
+    width: 35%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right: 1px dotted rgba(0, 119, 217, 0.4);
+}
+
+    #foto>div{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        color: rgb(0, 119, 217);
+        font-size: 2.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #foto>img{
+        position: relative;
+        border-radius: 50%;
+        width: 250px;
+        /* left: 15%; */
+        /**Propuesta*/
+        /*width: 15vw;*/
+        height: 250px;
+        object-fit: cover;
+    }
+
+    #foto>#labelbutton{
+        position: relative;
+        height: 35px;
+        width: 45%;
+        /* left: 27.5%; */
+        margin-top: 15%;
+        font-size: .9rem;
+        color: white;
+        background-color: rgb(0, 119, 217);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #foto>#labelbutton:hover{
+        opacity: 0.8;
+    }
+
+    #labelbutton>label{
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+#datosPerfil{
+    position: absolute;
+    width: 65%;
+    float: left;
+    height: calc(100% - 61px);
+    left: 35%;
+    top: 61px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+}
+
+#tablaDatos{
+    width: 100%;
+}
+
+#tablaDatos2{
+    width: 100%;
+}
+
+#tablaDatos>tbody>tr>th{
+    pointer-events: none;
+}
+
+#tablaDatos>tbody>tr:hover{
+/*
+    background-color: transparent !important;
+    cursor: default !important;
+    color: black !important;
+*/
+}
+
+#tablaDatos>tbody>tr, #tablaDatos2>tbody>tr{
+    background-color: white !important;
+    text-align: center;
+    height: 55px;
+}
+
+#tablaDatos2>tbody>tr{
+    height: 40px;
+    pointer-events: none;
+}
+
+#tablaDatos>tbody>tr>td, #tablaDatos2>tbody>tr>td{
+    text-align: center !important;
+}
+
+.datoPerfil{
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    font-size: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    /*padding-left: 10px;*/
+    height: 30px;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .07);
+}
+
+.edicion{
+    cursor: pointer;
+    min-width: 60px;
+    padding: 0 !important;
+}
+
+
+#salir{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 60px;
+    width: 60px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#salir>i{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+#mensaje2{
+    text-align: center !important;
+    color: red;
+    pointer-events: none;
+}
+
+
+#barraPerfil{
+    position: absolute;
+    width: 65%;
+    height: 60px;
+    left: 35%;
+    top: 0px;
+    z-index: 999999999;
+    border-bottom: 1px solid rgba(0, 117, 219, .3);
+}
+
+.opcPerf{
+    width: 50%;
+    float: left;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    color: rgb(0, 117, 219);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.selected{
+    border-bottom: 1px solid rgb(0, 117, 219);
+}
+
+.invis{
+    display: none;
+    visibility: hidden;
+}

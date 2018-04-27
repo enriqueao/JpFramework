@@ -1,0 +1,329 @@
+*{
+    outline: none;
+}
+
+body{
+    background-color: #E9EDEF;
+}
+
+/*Header-------------------------------------------------------------------------*/
+
+#header{
+    height: 70px;
+    background-color: #055391;
+}
+
+    .logosUnesco{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        float: left;
+        left: -10px;
+        margin-left: 10px;
+        border-right: 1px dotted rgba(255, 255, 255, 0.5);
+    }
+
+    .logosUnesco>img{
+        position: relative;
+        width: 70px;
+        top: 13%;
+        left: 2%;
+        float: left;
+        filter: brightness(3000%);
+    }
+
+    .logosUnesco>p{
+        white-space: wrap;
+        position: relative;
+        height: 100%;
+        width: 150px;
+        float: left;
+        left: 20px;
+        top: 20%;
+        color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        font-size: .7em;
+    }
+
+    .logosPHI{
+        position: relative;
+        height: 100%;
+        width: 160px;
+        float: left;
+        border-right: 1px dotted rgba(255, 255, 255, 0.5);
+    }
+
+    .logosPHI>img{
+        position: relative;
+        width: 60px;
+        left: 2%;
+        float: left;
+    }
+
+    .logosPHI>p{
+        white-space: wrap;
+        position: relative;
+        height: 100%;
+        width: 70px;
+        float: left;
+        left: 15px;
+        top: 20%;
+        color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        font-size: .7em;
+    }
+
+    .logosAqua{
+        position: relative;
+        height: 100%;
+        width: 195px;
+        float: left;
+        padding: 0px 20px 0px 20px;
+        border-right: 1px dotted rgba(255, 255, 255, 0.5);
+    }
+
+    .logosAqua>img{
+        position: relative;
+        width: 180px;
+        left: 7.5px;
+        float: left;
+        filter: brightness(3000%);
+    }
+
+    .logosAqua>h2{
+        position: relative;
+        top: 8px;
+        color: white;
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .logosAqua>p{
+        white-space: wrap;
+        position: relative;
+        width: 100%;
+        float: left;
+        top: 8px;
+        color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        font-size: .7em;
+    }
+
+/*Header-------------------------------------------------------------------------*/
+
+
+/*Container----------------------------------------------------------------------*/
+
+#container{
+    height: calc(100% - 90px);
+    min-height: 80%;
+}
+
+    #container:after{
+        content: "";
+        display: block;
+    }
+
+    #footer, #container:after{
+        height: 20px;
+    }
+
+#noticias{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 3px;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    height: 540px;
+    top: 3%;
+    left: 8%;
+    float: left;
+    box-sizing: border-box;
+}
+
+#forms{
+    position: relative;
+    min-height: 50%;
+    top: 3%;
+    background-color: rgba(255, 255, 255, 0.95);
+    right: 8%;
+    border-radius: 3px;
+    float: right;
+    box-sizing: border-box;
+}
+
+#tabs{
+    position: relative;
+    height: 40px;
+    text-align: center;
+    color: rgba(0, 117, 209, 1);
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    border-bottom: none;
+}
+
+    .tab{
+        position: relative;
+        height: 40px;
+        border-bottom: 2px solid rgba(0, 117, 219, 0.2);
+        cursor: pointer;
+    }
+
+    .tab>h4{
+        position: relative;
+        top: 25%;
+        height: 50%;
+        font-weight: normal;
+    }
+
+    .tab-active{
+        border-bottom: 2px solid rgb(0, 117, 219);
+    }
+
+#login{
+    position: absolute;
+    top: 40px;
+    height: auto;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    border-top: none;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
+}
+
+    #login>label, #recuperarPass>label{
+        left: 8.85%;
+        font-size: 1em;
+        color: rgba(0, 0, 0, .7);
+        margin-top: 20px;
+    }
+
+    #login>input, #frameLateral>input, #registro>input, select, .prompt, #recuperarPass>input{
+        left: 8.85%;
+        margin-top: 5px;
+        font-size: .9em;
+        box-sizing: border-box;
+        padding-left: 10px;
+        height: 35px;
+        border: none;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, .07);
+    }
+    
+    .prompt{
+        text-align: center;
+        padding-left: 0px !important;
+    }
+
+    #login>button, #frameLateral>button, #registro>button{
+        width: 40%;
+        left: 30%;
+        border: none;
+        background-color: rgb(0, 117, 209);
+        height: 35px;
+        border-radius: 3px;
+        margin-top: 20px;
+        position: relative;
+        font-size: 1em;
+        color: white;
+        cursor: pointer;
+    }
+
+    #login>button:hover, #frameLateral>button:hover, #registro>button:hover, #recuperarPass>button:hover{
+        opacity: 0.8;
+    }
+
+    .espacio{
+        height: 35px;
+    }
+
+  #registro{
+    position: absolute;
+    top: 40px;
+    height: auto;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    border-top: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+    #frameLateral>label, #registro>label{
+        top: 10px;
+        left: 8.85%;
+        font-size: 1em;
+        color: rgba(0, 0, 0, .7);
+        margin-top: 5px;
+        margin-bottom: 1px;
+    }
+
+    #frameLateral>input, #registro>input, select{
+        top: 10px;
+        margin-top: 0px !important;
+        margin-bottom: 2px;
+    }
+
+.no-visible{
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*Container----------------------------------------------------------------------*/
+
+
+/*Footer-------------------------------------------------------------------------*/
+
+#footer{
+    position: absolute;
+    top: calc(100% - 20px);
+    background-color: #055391;
+    border-top: 5px solid #0075D1;
+}
+
+/*Footer-------------------------------------------------------------------------*/
+
+
+#recuperarPass{
+    position: relative;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 10%;
+    border-radius: 3px;
+    left: 37.5%;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    transition: opacity 0.2s ease-in-out;
+
+}
+
+#recuperarPass>div>h4{
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 117, 209, 1);
+}
+
+#recuperarPass>div{
+    position: relative;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 117, 209, 1);
+    border-bottom: 1px solid rgba(0, 117, 209, 1);
+}
+
+#recuperarPass>button{
+    border: none;
+    background-color: rgb(0, 117, 209);
+    height: 35px;
+    width: 40%;
+    left: 30%;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 1.05em;
+    color: white;
+    cursor: pointer;
+}

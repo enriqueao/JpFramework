@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /controllers/
+Disallow: /libs/
+Disallow: /models/
+Disallow: /public/
+Disallow: /views/
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: /*.php$
+Disallow: robots.txt

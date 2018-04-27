@@ -1,0 +1,483 @@
+*{
+    outline: none;
+}
+
+#barraOpciones{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: .9em;
+}
+
+    #barraOpciones>label{
+        color: rgba(0, 117, 219, 1);
+        font-size: 1em;
+        margin-right: 10px;
+        margin-top: 7px;
+        float: left;
+    }
+
+    #barraOpciones>input{
+        background-color: rgba(0, 0, 0, .07);
+        height: 30px;
+        width: 25%;
+        border-radius: 3px 0px 0px 3px;
+        border: none;
+        font-size: .9em;
+        box-sizing: border-box;
+        padding-left: 10px;
+        margin-left: 20px;
+        outline: none;
+        float: left;
+    }
+
+    #btnBuscar{
+        background-color: rgba(0, 117, 219, 1);
+        height: 30px;
+        width: 5%;
+        border-radius: 0px 3px 3px 0px;
+        margin-left: -4px;
+        border: none;
+        font-size: 1.1em;
+        color: white;
+        text-align: center;
+        float: left;
+    }
+
+    #barraOpciones>select{
+        background-color: rgba(0, 0, 0, .07);
+        height: 30px;
+        width: 25%;
+        border: none;
+        font-size: .9em;
+        outline: none;
+        float: left;
+    }
+
+    .btnOpcion{
+        background-color: rgba(0, 117, 219, 1);
+        color: white;
+        height: 30px;
+        width: auto;
+        padding: 0px 10px;
+        padding-top: 2px;
+        margin-left: 10px;
+        border-radius: 3px;
+        font-size: 1.3em;
+        border: none;
+        outline: none;
+    }
+
+    #btnBuscar:hover, .btnOpcion:hover{
+        cursor: pointer;
+        background-color: rgba(0, 117, 209, 0.7);
+    }
+
+    #tablaArticulos{
+        position: relative;
+        width: 100%;
+        top: 10px;
+        left: 4px;
+        height: calc(100% - 70px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    table{
+        position: relative;
+        width: 100%;
+        font-size: 0.95em;
+        margin-bottom: 10px;
+        border-collapse: collapse;
+    }
+
+    tr:nth-child(even){
+        background-color: rgba(0, 0, 0, 0.07);
+    }
+
+    th, td{
+        padding: 10px;
+        /*padding-left: 20px;*/
+        text-align: left;
+        width: 1em;
+    }
+
+    td{
+        border-right: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    td>p{
+      /*height: 38px;*/
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      /*line-height: 19px;
+      max-height: 38px;
+      min-height: 38px;*/
+    }
+
+    .tooltipleft>.fa-times{
+     color: #E53935;
+    }
+
+    .tooltipleft>.fa-book{
+         color: #0075D1;
+    }
+
+    .tooltipleft>.fa-paper-plane{
+         color: #90A4AE;
+    }
+
+    .tooltipleft>.fa-pencil-square-o{
+         color: #0091EA;        
+    }
+
+    .tooltipleft>.fa-exclamation-circle{
+         color: #FBC02D;
+    }
+
+    .tooltipleft>.fa-exclamation-triangle{
+         color: #FF6F00;
+    }
+
+    th{
+        color: rgb(0, 117, 219);
+        font-weight: normal;
+        font-size: 1.05em !important;
+    }
+
+    .tituloArticulo{
+        width: 44%;
+    }
+    
+
+    .estatus{
+        width: 90%;
+        min-width: 70px;
+    }
+/*
+    .estatusT{
+        text-align: center;
+    }
+*/
+
+ar{
+    border: solid rgb(0, 117, 219);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.down{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.mas>p{
+    cursor: pointer;
+    color: rgb(0, 117, 219);
+}
+
+select:required:invalid {
+  color: gray;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+option {
+  color: black;
+}
+
+.option2{
+    width: 45% !important;
+}
+
+#paginas{
+    position: absolute;
+    border-top: solid 1px rgba(0, 117, 219, 0.3);
+    background-color: white;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#paginas>span{
+    color: rgb(0, 117, 219);
+    width: 50px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#paginas>button{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    border: 1px solid rgba(0, 117, 219, 0.6);
+    background-color: white;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(0, 117, 219);
+    border-radius: 3px;
+}
+
+.paginaActual{
+    background-color: rgb(0, 117, 219) !important;
+    color: white !important;
+}
+
+.contador{
+    position: relative;
+    margin-right: 30% !important;
+    width: 200px !important;
+}
+
+#previoArticulo{
+    position: relative;
+    border-radius: 0px 0px 3px 3px;
+    background-color: transparent;
+    min-height: 90%;
+}
+
+#infoPrincipal{
+    position: relative;
+    width: 90%;
+    height: auto;
+    left: 5%;
+    margin-bottom: 50px;
+}
+
+#infoPrincipal>h3{
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#infoPrincipal>p, #infoPrincipal>div{
+    color: rgba(0, 0,  0, 0.5);
+    margin-bottom: 5px;
+}
+
+#infoPrincipal>div{
+    position: relative;
+    float: left;
+    width: 50%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#abstract{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+#abstract>h3{
+    font-weight: normal;
+    font-size: 1.1em;
+    color: rgb(0, 117, 219);
+    margin-bottom: 10px;
+}
+
+#abstract>div{
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    text-align: justify;
+    max-height: 150px;
+}
+
+#expand{
+    color: rgba(0,  117, 219, 0.5);
+    font-size: .90em;
+    width: 100%;
+    text-align: center;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#opciones2{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-size: .9em;
+}
+
+#btnSubir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option{
+    position: relative;
+    background-color: rgb(0, 117, 219);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.option:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.icon{
+    position: relative;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+i{
+    color: white;
+}
+
+.infoFile{
+    position: relative;
+    float: left;
+    text-align: right;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#frameLateral{
+    border: none !important;
+    position: absolute;
+    height: 100%;
+    border-top: none;
+    box-sizing: border-box;
+    overflow: auto;
+}
+    #frameLateral>button{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    #frameLateral>h2{
+        position: relative;
+        width: 82.3%;
+        font-weight: normal;
+        left: 8.85%;
+        color:rgb(0, 117, 219);
+        margin-top: 20px;
+    }
+
+    #frameLateral>textarea{
+        resize: none;
+        height: 250px;
+        margin-top: 10px;
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 83%;
+        left: 8%;
+        margin-bottom: 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, .07);
+    }
+
+    #frameLateral>label{
+        top: 10px;
+        left: 8.85%;
+        font-size: 1em;
+        color: rgba(0, 0, 0, .7);
+        margin-top: 13px;
+        margin-bottom: 1px;
+    }
+
+
+    #frameLateral>input, select{
+        top: 10px;
+        left: 8.85%;
+        margin-top: 5px;
+        margin-bottom: 2px;
+        font-size: .9em;
+        box-sizing: border-box;
+        padding-left: 10px;
+        height: 35px;
+        border: none;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, .07);
+    }
+
+    .subir{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+    tr:not(:first-child):hover {
+        background-color: rgba(0, 117, 219, 1);
+        cursor: pointer;
+    }
+
+    tr:not(.perfilRow):hover td *{
+        /*filter:invert(100%)
+        font-weight: bold;*/
+        color: white;
+    }
+
+#evaluaciones{
+    width: 95%;
+    left: 2.5%;
+    text-align: center;
+}
+
+#evaluaciones>tbody>tr:nth-child(even){
+    background-color: white !important;
+}
+
+#evaluaciones>tbody>tr>td{
+    text-align: center;
+}
+
+#evaluaciones>tbody>tr:first-child{
+    color: rgba(0, 117, 219, 1);
+    font-size: 1.1em;
+}
+
+#evaluaciones>tbody>tr:not(:first-child):hover{
+    background-color: rgba(0, 117, 219, 1) !important;
+    color: white;
+}

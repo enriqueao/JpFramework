@@ -1,0 +1,471 @@
+*{
+    outline: none;
+}
+
+body{
+    background-color: #E9EDEF;
+}
+
+/*Header-------------------------------------------------------------------------*/
+
+#header{
+    height: 55px;
+    background-color: #055391;
+}
+
+    .logosUnesco{
+        position: relative;
+        height: 100%;
+        width: auto;
+        float: left;
+        left: -10px;
+        margin-left: 10px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    .logosUnesco>img{
+        position: relative;
+        height: 90%;
+        left: 2%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        float: left;
+        filter: invert(100%);
+    }
+
+    .logosUnesco>span{
+        position: relative;
+        height: 100%;
+        float: left;
+        left: 20px;
+        color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        font-size: 1.2em;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    /*.logosPHI{
+        position: relative;
+        height: 100%;
+        width: 160px;
+        float: left;
+        border-right: 1px dotted rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    .logosPHI>img{
+        position: relative;
+        height: 90%;
+        left: 2%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        float: left;
+    }
+
+    .logosPHI>p{
+        white-space: wrap;
+        position: relative;
+        height: 100%;
+        width: 70px;
+        float: left;
+        left: 15px;
+        color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        font-size: .7em;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+
+    .logosAqua{
+        position: relative;
+        height: 100%;
+        width: 195px;
+        float: left;
+        padding: 0px 20px 0px 20px;
+        border-right: 1px dotted rgba(255, 255, 255, 0.5);
+    }
+
+    .logosAqua>img{
+        position: relative;
+        width: 180px;
+        left: 7.5px;
+        float: left;
+        filter: brightness(3000%);
+    }
+
+    .logosAqua>h2{
+        position: relative;
+        top: 8px;
+        color: white;
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .logosAqua>p{
+        white-space: wrap;
+        position: relative;
+        width: 100%;
+        float: left;
+        top: 8px;
+        color: rgba(255, 255, 255, 0.9);
+        box-sizing: border-box;
+        font-size: .7em;
+    }*/
+
+/*Header-------------------------------------------------------------------------*/
+
+
+/*Container----------------------------------------------------------------------*/
+
+#container{
+    height: calc(100% - 75px);
+    min-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+    #container:after{
+        content: "";
+        display: block;
+    }
+
+    #footer, #container:after{
+        height: 20px;
+    }
+
+#noticias{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 3px;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    width: 50%;
+    height: 540px;
+    box-sizing: border-box;
+}
+
+#forms{
+    position: relative;
+    width: 30%;
+    height: 540px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#tabs{
+    position: relative;
+    height: 40px;
+    text-align: center;
+    color: rgba(0, 117, 209, 1);
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    border-bottom: none;
+}
+
+    .tab{
+        position: relative;
+        height: 40px;
+        border-bottom: 2px solid rgba(0, 117, 219, 0.2);
+        cursor: pointer;
+    }
+
+    .tab>h4{
+        position: relative;
+        top: 25%;
+        height: 50%;
+        font-weight: normal;
+    }
+
+    .tab-active{
+        border-bottom: 2px solid rgb(0, 117, 219);
+    }
+
+#login{
+    position: absolute;
+    top: 40px;
+    height: calc(100% - 40px);
+    padding-bottom: 100px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    border-top: none;
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    transition: opacity 0.5s ease-in-out;
+}
+
+    #login>div{
+        position: relative;
+        width: 82.3%;
+        left: 8.85%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #login>div>img{
+        height: 100%;
+        position: relative;
+        filter: invert(70%);
+    }
+
+    #login>span{
+        position: relative;
+        width: 54%;
+        left: 23%;
+        text-align: center;
+        font-weight: bold;
+        font-size: .85em;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    #login>label, #recuperarPass>label{
+        left: 8.85%;
+        font-size: .9em;
+        color: rgba(0, 0, 0, .7);
+        margin-top: 20px;
+    }
+
+    #login>input, #frameLateral>input, #registro>input, select, .prompt, #recuperarPass>input{
+        left: 8.85%;
+        margin-top: 5px;
+        font-size: .9em;
+        box-sizing: border-box;
+        padding-left: 10px;
+        height: 35px;
+        border: none;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, .07);
+    }
+    
+    .prompt{
+        text-align: center;
+        padding-left: 0px !important;
+    }
+
+    #login>button, #frameLateral>button, #registro>button{
+        width: 40%;
+        left: 30%;
+        border: none;
+        background-color: rgb(0, 117, 209);
+        height: 35px;
+        border-radius: 3px;
+        margin-top: 25px;
+        position: relative;
+        font-size: 1em;
+        color: white;
+        cursor: pointer;
+    }
+
+    #login>button:hover, #frameLateral>button:hover, #registro>button:hover, #recuperarPass>button:hover{
+        opacity: 0.8;
+    }
+
+    .espacio{
+        height: 35px;
+    }
+
+  #registro{
+    position: absolute;
+    top: 40px;
+    height: calc(100% - 40px);
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    border-top: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+    #frameLateral>label, #registro>label{
+        top: 10px;
+        left: 8.85%;
+        font-size: 1em;
+        color: rgba(0, 0, 0, .7);
+        margin-top: 5px;
+        margin-bottom: 1px;
+    }
+
+    #registro>label{
+        font-size: .9em;
+    }
+
+    #frameLateral>input, #registro>input, select{
+        top: 10px;
+        margin-top: 0px !important;
+        margin-bottom: 2px;
+    }
+
+.no-visible{
+    display: none;
+}
+
+/*Container----------------------------------------------------------------------*/
+
+
+/*Footer-------------------------------------------------------------------------*/
+
+#footer{
+    background-color: #055391;
+    border-top: 5px solid #0075D1;
+}
+
+/*Footer-------------------------------------------------------------------------*/
+
+/*Recuperar contraseña-----------------------------------------------------------*/
+#modalRecuperarPass{
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#recuperarPass{
+    position: absolute;
+    width: 30% !important;
+    height: auto;
+    float: right;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 3px;
+    z-index: 9999;
+    border: 1px solid rgba(0, 117, 209, 0.2);
+    transition: opacity 0.2s ease-in-out;
+}
+
+#recuperarPass>div>h4{
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 117, 209, 1);
+}
+
+#recuperarPass>div{
+    position: relative;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 117, 209, 1);
+    border-bottom: 1px solid rgba(0, 117, 209, 1);
+}
+
+#recuperarPass>button{
+    border: none;
+    background-color: rgb(0, 117, 209);
+    height: 35px;
+    width: 40%;
+    left: 30%;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 1.05em;
+    color: white;
+    cursor: pointer;
+}
+
+.fro{
+    z-index: 9999;
+}
+/*Recuperar contraseña-----------------------------------------------------------*/
+
+/*Noticias----------------------------------------------------------------------*/
+#msjBi{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    top: 2.5%;
+    height: 42.5%;
+}
+
+#msjBi>h1{
+    font-size: 1.6em;
+    color: #055391;
+}
+
+#msjBi>p{
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.95);
+}
+
+#showVid{
+    text-decoration: underline;
+    color: #055391;
+    cursor: pointer;
+}
+
+#logosCr{
+    position: relative;
+    width: 95%;
+    left: 2.5%;
+    height: 55%;
+}
+
+#logosCr>h1{
+    height: 10%;
+    font-size: 1.2em;
+    color: #055391;
+}
+
+#colabs{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#colabs>img{
+    position: relative;
+}
+
+#colabs>div{
+    position: relative;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+#colabs>div>img{
+    position: relative;
+    height: 85%;
+    margin-right: 20px;
+}
+
+#colabs>div>p{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: auto;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#imgOne{
+    height: 45%;
+    filter: brightness(120%);
+}
+
+#imgTwo{
+    height: 30%;
+}
+
