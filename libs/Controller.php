@@ -1,5 +1,4 @@
 <?php
-
 class Controller {
 
     function __construct(){
@@ -32,26 +31,11 @@ class Controller {
     }
 
     function pageNotFound(){
-        $this->view->render('Default', 'errorSitio', true);
+        $this->view->render('Default', '404', true);
     }
 
     function pageHistoryBack(){
         $this->view->render('Default','pageHistoryBack',true);
-    }
-
-    /**
-    * Funcion para controlar el acceso a los metodos de cada controlador.
-    * @param {String} $metodo: metodo el cual se tiene acceso ej. 'Nutricion::RealizarPrueba'.
-    *
-    * @author Enrique Aguilar Orozco
-    *
-    */
-    function accesos($metodo){
-        if (Session::exist()) {
-            return (array_search($metodo, array_column(Session::getValue('accesosTipoUsuario'), 'descripcion')) > -1) ? true : $this->pageHistoryBack();
-        } else {
-            header('location:'.URL);
-        }
     }
 
     function clienteIP(){
@@ -152,66 +136,6 @@ class Controller {
         return $mail->Send();
     }
 
-    /**
-     * @author Enrique Aguilar Orozco
-     * [comprimirImagenAndUpload description]
-     * @param  [string] $tipo       [description]
-     * @param  [string] $destino    [description]
-     * @param  [object] $Archivotmp [description]
-     * @return [boolean]             [description]
-     */
-     /**
-     * @author Enrique Aguilar Orozco
-     *
-     */
-     // public function comprimirImagenAndUpload($tipo,$destino,$Archivotmp){
-     //     if ($Archivotmp != ''){
-     //         //Imagen original
-     //         $rtOriginal = $Archivotmp;
-     //         //Crear variable
-     //         if($tipo == "image/jpeg" || $tipo == 'image/jpg'){
-     //             $original = imagecreatefromjpeg($rtOriginal);
-     //         } elseif($tipo == 'image/png') {
-     //             $original = imagecreatefrompng($rtOriginal);
-     //         }
-     //         //Ancho y alto máximo
-     //         $max_ancho = 400; $max_alto = 200;
-     //
-     //         list($ancho,$alto)=getimagesize($rtOriginal);
-     //
-     //         $x_ratio = $max_ancho / $ancho;
-     //         $y_ratio = $max_alto / $alto;
-     //
-     //         if(($ancho <= $max_ancho) && ($alto <= $max_alto) ){
-     //             $ancho_final = $ancho;
-     //             $alto_final = $alto;
-     //         }
-     //         else if(($x_ratio * $alto) < $max_alto){
-     //             $alto_final = ceil($x_ratio * $alto);
-     //             $ancho_final = $max_ancho;
-     //         }
-     //         else {
-     //             $ancho_final = ceil($y_ratio * $ancho);
-     //             $alto_final = $max_alto;
-     //         }
-     //
-     //         $lienzo=imagecreatetruecolor($ancho_final,$alto_final);
-     //
-     //         imagecopyresampled($lienzo,$original,0,0,0,0,$ancho_final, $alto_final,$ancho,$alto);
-     //         imagedestroy($original);
-     //
-     //         if($tipo == "image/jpeg" || $tipo == 'image/jpg'){
-     //             imagejpeg($lienzo,$destino);
-     //         } elseif($tipo == 'image/png'){
-     //             imagepng($lienzo,$destino);
-     //         }
-     //         return true;
-     //     } else {
-     //         return false;
-     //     }
-     //
-     // }
-
      public function comprimirImagenAndUpload($tipo,$destino,$Archivotmp){
          if ($Archivotmp != ''){
              //Imagen original
@@ -267,21 +191,6 @@ class Controller {
              return false;
          }
 
-     }
-
-     /**
-     * @author Enrique Aguilar Orozco
-     *
-     */
-     public function getKeyImg($cuenta){
-         $key = implode(getDate());
-         $key.=$cuenta;
-         $ran = rand(1,6);
-         for ($i=0; $i < $ran; $i++) {
-             $key = base64_encode($key);
-         }
-         $key = substr($key,5,40);
-         return $key;
      }
 }
 

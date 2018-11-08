@@ -5,7 +5,6 @@
 		private $status = true;
 
 		public function __construct() {
-
 	        require_once ('config.php');
 	        $this->host=DB_HOST;
 	        $this->user=DB_USER;
